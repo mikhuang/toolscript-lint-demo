@@ -3,8 +3,8 @@ export const getDeconstructedValueFromAttribute = (node) => {
 
   if (typeof node === "object" && node) {
     if ("ordered" in node) {
-      // biome-ignore lint/performance/noAccumulatingSpread:
       deconstructedContent = node.ordered.reduce(
+        // biome-ignore lint/performance/noAccumulatingSpread:
         (acc, item) => ({ ...acc, ...item }),
         {}
       );

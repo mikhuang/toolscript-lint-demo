@@ -1,1 +1,5 @@
-return moment(dateToUndefined.value ?? 'invalid').format()
+return moment(dateToUndefined.value ?? "invalid")
+  .tz(
+    "America/Los_Angeles"
+  )
+  .format();
