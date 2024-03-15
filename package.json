@@ -7,14 +7,14 @@
     "lint": "biome lint src",
     "test": "tap src/**/*.spec.ts",
     "test-watch": "tap repl w",
-    "start": "ts-node src/index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@biomejs/biome": "1.6.1",
     "tap": "^18.7.1",
-    "ts-node": "^10.9.2",
     "typescript": "^5.4.2"
   },
   "dependencies": {
