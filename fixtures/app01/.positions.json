@@ -1,8 +1,108 @@
 {
   "button1": {
-    "row": 3.2,
-    "col": 1,
+    "container": "momentInvalid",
+    "subcontainer": "22a48",
+    "row": 0.2,
+    "height": 1
+  },
+  "cny": {
+    "container": "money",
+    "subcontainer": "5ab2c",
+    "row": 1,
+    "height": 0.6,
+    "width": 9
+  },
+  "currency1": {
+    "container": "money",
+    "subcontainer": "5ab2c",
+    "height": 0.2,
+    "width": 12
+  },
+  "customHexButton": {
+    "container": "hexStyle",
+    "subcontainer": "22a48",
+    "row": 1,
     "height": 1,
+    "width": 12
+  },
+  "dateTime1": {
+    "container": "momentInvalid",
+    "subcontainer": "22a48",
+    "row": 0,
+    "height": 0.2,
+    "width": 12
+  },
+  "disableQuery": {
+    "height": 3.8,
+    "width": 4
+  },
+  "hexStyle": {
+    "row": 5.2,
+    "height": 3.8,
     "width": 1
+  },
+  "html1": {
+    "container": "money",
+    "subcontainer": "5ab2c",
+    "row": 0.2,
+    "height": 0.2,
+    "width": 9
+  },
+  "momentCatchInvalid": {
+    "container": "momentInvalid",
+    "subcontainer": "22a48",
+    "row": 1.8,
+    "height": 1,
+    "width": 9
+  },
+  "momentInvalid": {
+    "row": 21.8,
+    "height": 3.8,
+    "width": 4
+  },
+  "momentNoInvalid": {
+    "container": "momentInvalid",
+    "subcontainer": "22a48",
+    "row": 1.2,
+    "height": 1,
+    "width": 9
+  },
+  "money": {
+    "row": 14.6,
+    "height": 3.8,
+    "width": 4
+  },
+  "outputDisable": {
+    "container": "disableQuery",
+    "subcontainer": "22a48",
+    "row": 2.4,
+    "height": 0.6,
+    "width": 9
+  },
+  "outputNoDisable": {
+    "container": "disableQuery",
+    "subcontainer": "22a48",
+    "row": 1.8,
+    "height": 0.6,
+    "width": 9
+  },
+  "successButton": {
+    "container": "hexStyle",
+    "subcontainer": "22a48",
+    "height": 1,
+    "width": 12
+  },
+  "textInput1": {
+    "container": "disableQuery",
+    "subcontainer": "22a48",
+    "height": 0.2,
+    "width": 12
+  },
+  "usd": {
+    "container": "money",
+    "subcontainer": "5ab2c",
+    "row": 0.4,
+    "height": 0.6,
+    "width": 9
   }
 }

@@ -1,1 +1,0 @@
-const order = {name: nameInput.value, meal: mealSelect.value, quantity: quantityInput.value}; return order;

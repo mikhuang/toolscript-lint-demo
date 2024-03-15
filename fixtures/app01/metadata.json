@@ -1,15 +1,10 @@
 {
   "toolscriptVersion": "1.0.0",
   "version": "43.0.9",
-  "pageUuid": "0d68d1aa-d818-11ee-9d94-d3da42b8cb7f",
+  "pageUuid": "6823dd04-e2f1-11ee-9971-930c49cb1c60",
   "appTemplate": {
-    "notificationsSettings": {
-      "object": {
-        "globalQueryShowFailureToast": true,
-        "globalQueryShowSuccessToast": false,
-        "globalQueryToastDuration": 4.5
-      }
-    },
+    "appThemeId": 2,
+    "appThemeName": "Pink",
     "shortlink": false,
     "version": "3.40.0",
     "experimentalDataTabEnabled": true
