@@ -24,10 +24,28 @@ function getId(a) {
     ?.value.value;
 }
 
-function transformExpression(expression) {
+function transformExpression(expression, filepath: string) {
   if (expression.type === "Literal") {
     return expression.value;
   }
+  // array
+  if (expression.type === "ArrayExpression") {
+    return expression.elements.map(transformExpression);
+  }
+  // object
+  if (expression.type === "ObjectExpression") {
+    return expression.properties.reduce((acc, prop) => {
+      acc[prop.key.name] = transformExpression(prop.value, filepath);
+      return acc;
+    }, {});
+  }
+  // call
+  if (expression.type === "CallExpression") {
+    // assume it's an include, path as first argument
+    const arg = expression.arguments[0].value;
+    return fs.readFileSync(path.join(path.dirname(filepath), arg), "utf-8");
+  }
+  throw new Error(`Unsupported expression type: ${expression.type}`);
 }
 
 function lintFile(filepath: string): LintMessage[] {
@@ -45,7 +63,7 @@ function lintFile(filepath: string): LintMessage[] {
         if (attr.value.type === "JSXExpressionContainer") {
           return {
             name,
-            value: transformExpression(attr.value.expression),
+            value: transformExpression(attr.value.expression, filepath),
           };
         }
         return {
@@ -72,7 +90,6 @@ function lintFile(filepath: string): LintMessage[] {
     ACORN_WALK_VISITORS,
   });
 
-  console.log(JSON.stringify(tags, null, 2));
   const messages: LintMessage[] = [];
 
   for (const rule of RULES) {
