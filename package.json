@@ -2,12 +2,12 @@
   "name": "toolscript-lint-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "lint": "biome lint src",
     "test": "tap src/**/*.spec.ts",
     "test-watch": "tap repl w",
-    "start": "ts-node index.ts"
+    "start": "ts-node src/index.ts"
   },
   "author": "",
   "license": "ISC",
