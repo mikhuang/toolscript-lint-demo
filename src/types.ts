@@ -1,9 +1,13 @@
+type JsonObject = { [key: string]: JsonValue };
+
+type JsonValue = null | boolean | number | string | JsonValue[] | JsonObject;
+
 export type ToolscriptTag = {
   tagName: string;
   id: string;
   attributes: {
     name: string;
-    value: string;
+    value: JsonValue;
   }[];
   ancestors: {
     tagName: string;

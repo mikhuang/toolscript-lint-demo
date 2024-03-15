@@ -9,6 +9,8 @@ import acornWalk from "acorn-walk";
 import { NoCustomHexRule } from "./rules/NoCustomHexRule";
 import { UndefinedMomentRule } from "./rules/UndefinedMomentRule";
 import type { LintMessage, NodeRule, ToolscriptTag } from "./types";
+import { AutoQueryDisableRule } from "./rules/AutoQueryDisableRule";
+import { CurrencyRule } from "./rules/CurrencyRule";
 
 extend(acornWalk.base);
 
@@ -17,7 +19,12 @@ const ACORN_WALK_VISITORS = {
   JSXElement: () => {},
 };
 
-const RULES: NodeRule[] = [NoCustomHexRule, UndefinedMomentRule];
+const RULES: NodeRule[] = [
+  NoCustomHexRule,
+  UndefinedMomentRule,
+  AutoQueryDisableRule,
+  CurrencyRule,
+];
 
 function getId(a) {
   return a.openingElement.attributes.find((attr) => attr.name.name === "id")

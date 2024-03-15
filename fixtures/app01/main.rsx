@@ -107,7 +107,7 @@
         <Text
           id="cny"
           value={
-            '{{currency1.value.toLocaleString("en-US", { style: "currency", currency: "CNY" })}}'
+            '{{currency1.value.toLocaleString("en-UK", { style: "currency", currency: "CNY" })}}'
           }
           verticalAlign="center"
         />
